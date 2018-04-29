@@ -1,0 +1,112 @@
+.hero {
+  background-image: url('../img/bg/hero_bg.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.flow:nth-child(2) {
+    margin-left: auto;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    text-transform: uppercase;
+    color: white;
+}
+
+.nav__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.42;
+    justify-content: space-between;
+    font-size: 13px;
+    padding-left: 14px;
+    padding-right: 15px;
+    &:hover {
+      text-decoration: underline;
+    }
+}
+
+.nav__item {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  &:before {
+    display: flex;
+    content: ' ';
+    @include circle(5px, #fff);
+  }
+  &:first-child:before {
+    content: "";
+    height: 0px;
+    width: 0px;
+  }
+}
+
+.hero__container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  padding-bottom: 15%;
+}
+
+.hero__img, .hero__description {
+  flex-basis: 50%;
+  display: flex;
+}
+
+.hero__description {
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.section__title {
+  color: #f9b43b;
+  font-family: 'Gagalin';
+  font-size: rem(72px);
+  font-weight: 300;
+  line-height: 1.42;
+  margin: 0;
+  padding-top: 35px;
+}
+
+.hero__description-text {
+  color: #fff;
+  font-family: 'Lifehack';
+  font-size: rem(72px);
+  line-height: 1;
+}
+
+.scroll-btn {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0;
+    left:50%;
+    bottom: 20%;
+}
