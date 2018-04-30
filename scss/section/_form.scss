@@ -1,0 +1,173 @@
+.delivery {
+  background-image: url('../img/bg/form-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+}
+
+.section__title--form {
+  padding-top: 140px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.build--one, .build--two {
+  display: flex;
+  flex-direction: column;
+}
+
+.build__contacts, .build__adress, .form__btns{
+  display: flex;
+}
+
+
+.build__contacts, .build__street {
+  margin-bottom: 15px;
+}
+
+.margin {
+  margin-bottom: 10px;
+}
+
+.house, .housing, .flat {
+  margin-right: 20px;
+}
+
+.contact-name, .contact-phone {
+  min-width: 220px;
+}
+
+.contact-name {
+  margin-right: 20px;
+}
+
+input {
+  border: 1px solid #d1cfcb;
+	border-radius: 5px;
+  padding: 6px 0 4px 10px;
+  outline: none;
+  width: 100%;
+  margin-top: 8px;
+  &:focus {
+    border: 1px solid #f9b43b;
+    border-radius: 5px;
+  }
+}
+label, p {
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+}
+
+p {
+  margin-top: 0px;
+  margin-bottom: 2px;
+}
+
+textarea {
+  resize: none;
+  outline: none;
+  border-radius: 5px;
+  min-height: 109px;
+  margin-bottom: 19px;
+  &:focus {
+    border: 1px solid #f9b43b;
+    border-radius: 5px;
+ }
+}
+
+.form__col {
+  &--left {
+    margin-right: 20px;
+  }
+width: 460px;
+}
+
+.build__pay input {
+  width: 30px;
+}
+
+
+.form__radio-elem, {
+  display: inline-block;
+  vertical-align: middle;
+  margin:0;
+}
+
+
+.form__radio-text, .form__check-text {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.form__radio-fake{
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: relative;
+  margin-right: 8px;
+}
+
+.form__radio-elem:checked +.form__radio-fake:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 7px;
+  height: 7px;
+  background-color:#e35028;
+  border-radius: 50%;
+}
+
+.form__check-fake {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  vertical-align: middle;
+  position: relative;
+  outline: none;
+  margin-right: 8px;
+}
+
+.form__check-elem:checked +.form__check-fake:after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 11px;
+  height: 9px;
+  transform: translate(-50%, -50%);
+  background-image: url(../img/content/check.png);
+}
+
+.radio {
+  .form__radio {
+    margin-right: -5px;
+  }
+  margin-bottom: 20px;
+}
+
+.check {
+  margin-bottom: 20px;
+}
+
+.form__btns-order {
+  margin-right: 20px;
+}
+
+.form__btns {
+  align-items: center;
+}
