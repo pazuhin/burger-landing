@@ -110,3 +110,17 @@
     left:50%;
     bottom: 20%;
 }
+
+.scroll-btn:hover {
+  animation: move 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+@keyframes move {
+  100% {
+    opacity: 0;
+    transform: translateY(20px)
+  }
+}
