@@ -396,6 +396,96 @@ ul {
 .description__img--natural {
   margin-bottom: 35px; }
 
+.team {
+  background-image: url("../img/bg/bg-team.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  position: relative; }
+
+.absolut {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-image: url("../img/bg/bg-team-absolut.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
+
+.section__title--team {
+  margin-bottom: 25px;
+  padding-top: 0px; }
+
+.our-team {
+  padding: 100px 70px 40px 90px; }
+
+.description__text {
+  color: #fff; }
+
+.link {
+  font-family: 'Gagalin';
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block; }
+  .link:hover {
+    color: #f8b43a; }
+
+.description {
+  height: 0;
+  overflow: hidden;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+
+ul li:hover .description {
+  height: 100%; }
+
+.description__avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-right: 20px; }
+
+.accordeon__item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 35px; }
+
+.accordeon__item:before {
+  content: "";
+  display: block;
+  border-top: 6px solid #f8b43a;
+  border-right: 6px solid transparent;
+  border-bottom: 0px solid transparent;
+  border-left: 6px solid transparent;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 7px;
+  left: 0%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s; }
+
+.accordeon__item:hover:before {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.description__text {
+  max-width: 230px; }
+
+.prof {
+  margin-bottom: 10px; }
+
 .reviews {
   height: 100vh;
   display: -webkit-box;
@@ -498,7 +588,7 @@ h3 {
   position: relative; }
 
 .section__title--form {
-  padding-top: 140px; }
+  padding-top: 25%; }
 
 .form {
   display: -webkit-box;
