@@ -13,9 +13,12 @@
   align-items: center;
   padding-top: 10px;
 }
-
-.flow:nth-child(2) {
-    margin-left: auto;
+//
+// .flow:nth-child(2) {
+//     margin-left: auto;
+// }
+.header__menu {
+  margin-left: auto;
 }
 
 .nav__list {
@@ -79,6 +82,10 @@
   display: flex;
 }
 
+.hero__img {
+  max-width: 100%;
+}
+
 .hero__description {
   flex-direction: column;
   justify-content: center;
@@ -108,7 +115,7 @@
     height: 30px;
     bottom: 0;
     left:50%;
-    bottom: 20%;
+    bottom: 10%;
 }
 
 .scroll-btn:hover {

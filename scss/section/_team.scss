@@ -12,10 +12,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  background-image: url('../img/bg/bg-team-absolut.png');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  background-color: rgba(#2f3234, 0.93);
 }
 
 .section__title--team {
@@ -27,34 +24,41 @@
   padding: 100px 70px 40px 90px;
 }
 
-.description__text {
+.person__text {
   color: #fff;
 }
 
-.link {
+.accordeon__trigger {
   font-family: 'Gagalin';
   font-size: 14px;
   color: #fff;
   text-decoration: none;
   margin-bottom: 10px;
   display: block;
-  &:hover {
-    color: $yellow;
-  }
 }
-.description {
+
+.person {
   height: 0;
   overflow: hidden;
-  justify-content: flex-start;
 }
 
-ul li:hover {
-  .description {
-    height: 100%;
-}
+ .accordeon__item--active {
+   .person {
+     display: flex;
+     height: auto;
+     justify-content: flex-start;
+   }
+   .accordeon__trigger {
+     color: $yellow;
+   }
+
+   &:before {
+     transform: rotate(180deg);
+   }
+
 }
 
-.description__avatar {
+.person__avatar {
     width: 100px;
     height: 100px;
     border-radius: 50%;
@@ -64,6 +68,7 @@ ul li:hover {
     background-size: cover;
     margin-right: 20px;
 }
+
 .accordeon__item {
   position: relative;
   padding-left: 20px;
@@ -89,10 +94,17 @@ ul li:hover {
   transform: rotate(180deg);
 }
 
-.description__text {
+.person__text {
   max-width: 230px;
 }
 
 .prof {
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.job-text {
+  font-size: 14px;
+  font-weight: 300;
 }
