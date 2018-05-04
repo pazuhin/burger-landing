@@ -487,11 +487,6 @@ ul {
   -o-transition: 0.3s;
   transition: 0.3s; }
 
-.accordeon__item:hover:before {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
-
 .person__text {
   max-width: 230px; }
 
