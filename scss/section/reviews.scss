@@ -21,6 +21,11 @@
       transition: 0.3s;
       opacity: 1;
       }
+
+    @include tablets {
+      width: 50%;
+      height: 25%;
+    }
 }
 
 .reviews__item-hover {
@@ -35,42 +40,63 @@
 }
 
 .review {
-  padding: 50px 70px 50px 40px;
+  padding: rem(50px) rem(70px) rem(50px) rem(40px);
   opacity: 0;
   transform: scale(0.9);
   display: flex;
   justify-content:space-around;
   align-items: flex-start;
   flex-direction: column;
+
+  @include tablets {
+    padding: 3.125rem rem(45px) 3.125rem 4.5rem;
+  }
 }
 
 h3 {
   font-family: 'Gagalin';
-  font-size: 14px;
+  font-size: rem(14px);
   color: #fff;
+
+  @include tablets {
+    margin: 0 auto;
+    margin-bottom: rem(10px);
+  }
 }
 
 .review__text {
   font-weight: 300;
-  font-size: 14px;
+  font-size: rem(14px);
   color: #fff;
   text-align: left;
   line-height: 1.76;
+
+  @include tablets {
+    text-align: center;
+    margin-bottom: rem(30px);
+  }
 }
+
+.review__btn {
+  @include tablets {
+    margin: 0 auto;
+}
+}
+
 .review__btn-link {
-min-width: rem(98px);
-padding: 10px 16px 10px 16px;;
-border-radius: 5px;
-background-color: #2f3234;
-color: #fff;
-text-decoration: none;
-font-size: rem(13px);
-font-weight: 500;
-line-height: 1.42;
-text-transform: uppercase;
-transition: .5s;
-display: flex;
-&:hover {
-  background-color: darken(#2f3234, 7%);
-}
+  min-width: rem(98px);
+  padding: rem(10px) rem(16px) rem(10px) rem(16px);;
+  border-radius: rem(5px);
+  background-color: #2f3234;
+  color: #fff;
+  text-decoration: none;
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  transition: .5s;
+  display: flex;
+  &:hover {
+    background-color: darken(#2f3234, 7%);
+  }
 }

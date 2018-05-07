@@ -1,15 +1,18 @@
 .wrapper {
+  position: relative;
+  overflow: hidden;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
 }
 
 .maincontent {
   height: 100%;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .container {
-  width: 940px;
+  max-width: rem(940px);
+  width: 95%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -18,16 +21,15 @@
 }
 
 .section {
-  height: 100%;
+  height: 100vh;
   background-color: rgba(0,0,0,0.31);
-  min-width: 940px;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
 .order-link {
   min-width: rem(98px);
-  padding: 10px 16px 10px 16px;;
-  border-radius: 5px;
+  padding: rem(10px) rem(16px) rem(10px) rem(16px);;
+  border-radius: rem(5px);
   background-color: $orange;
   color: #fff;
   text-decoration: none;
@@ -44,25 +46,29 @@
 
 .sidebar {
     position: fixed;
-    right: 50px;
-    top: 110px;
+    right: rem(50px);
+    top: rem(110px);
+
+    @include tablets {
+      display: none;
+    }
 }
 
 .sidebar__item {
-    margin-bottom: 15px;
+    margin-bottom: rem(15px);
 }
 
 .sidebar__link {
     display: flex;
     position: relative;
-    width: 13px;
-    height: 13px;
+    width: rem(13px);
+    height: rem(13px);
 }
 
 .sidebar__link::before {
     content: '';
-    height: 6px;
-    width: 6px;
+    height: rem(6px);
+    width: rem(6px);
     background-color: #fff;
     border-radius: 50%;
     position: absolute;
@@ -72,10 +78,10 @@
 
 .sidebar__link:after {
     content: "";
-    width: 14px;
-    height: 14px;
+    width: rem(14px);
+    height: rem(14px);
     border-radius: 50%;
-    border: 1px solid #fff;
+    border: rem(1px) solid #fff;
     position: absolute;
     left: 50%;
     transform: translate(-57%, -7%);

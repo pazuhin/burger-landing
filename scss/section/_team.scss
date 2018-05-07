@@ -7,21 +7,29 @@
 }
 
 .absolut {
-  width: 50%;
-  height: 100%;
   position: absolute;
   top: 0;
   right: 0;
+  bottom: 0;
+  left: 50%;
   background-color: rgba(#2f3234, 0.93);
+
+  @include tablets {
+    left: 0;
+  }
 }
 
 .section__title--team {
-  margin-bottom: 25px;
-  padding-top: 0px;
+  margin-bottom: rem(27px);
+  padding-top: rem(0px);
 }
 
 .our-team {
-  padding: 100px 70px 40px 90px;
+  padding: rem(100px) rem(70px) rem(40px) rem(90px);
+
+  @include tablets {
+    text-align: center;
+  }
 }
 
 .person__text {
@@ -30,23 +38,40 @@
 
 .accordeon__trigger {
   font-family: 'Gagalin';
-  font-size: 14px;
+  font-size: rem(14px);
   color: #fff;
   text-decoration: none;
-  margin-bottom: 10px;
-  display: block;
+  margin-bottom: rem(10px);
+  display: inline-block;
+
+  @include tablets {
+  display: inline-block;
+  font-size: rem(25px);
+  }
 }
 
 .person {
   height: 0;
   overflow: hidden;
+
+  @include tablets {
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+  }
+}
+
+.accordeon {
+  @include tablets {
+    padding: 0 10%;
+  }
 }
 
  .accordeon__item--active {
    .person {
-     display: flex;
      height: auto;
-     justify-content: flex-start;
+     padding-left: rem(20px);
+     margin-bottom: rem(30px);
    }
    .accordeon__trigger {
      color: $yellow;
@@ -59,48 +84,62 @@
 }
 
 .person__avatar {
-    width: 100px;
-    height: 100px;
+    width: 6.25rem;
+    height: rem(100px);
     border-radius: 50%;
     overflow: hidden;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    margin-right: 20px;
+    margin-right: 1.25rem;
+    display: inline-block;
+
+    @include tablets {
+    margin-right: 0;
+    margin-bottom: rem(15px);
+    width: 7.25rem;
+    height: 7.25rem;
+    }
 }
 
 .accordeon__item {
   position: relative;
-  padding-left: 20px;
-  margin-bottom: 35px;
+  margin-bottom: 1.1875rem;
 }
 
 .accordeon__item:before {
   content: "";
-  display: block;
-  border-top: 6px solid $yellow;
-  border-right: 6px solid transparent;
-  border-bottom: 0px solid transparent;
-  border-left: 6px solid transparent;
-  width: 0px;
-  height: 0px;
-  position: absolute;
-  top: 7px;
-  left: 0%;
+  display: inline-block;
+  border-top: rem(6px) solid $yellow;
+  border-right: rem(6px) solid transparent;
+  border-bottom: rem(0px) solid transparent;
+  border-left: rem(6px) solid transparent;
   transition: 0.3s;
+  margin-right: rem(5px);
 }
 
 .person__text {
-  max-width: 230px;
+  max-width: 14.75rem;
+  display: inline-block;
+
+  @include tablets {
+  max-width: none;
+  }
 }
 
 .prof {
-  margin-bottom: 10px;
-  font-size: 14px;
+  margin-bottom: 0.9rem;
+  font-size: 0.875rem;
   font-weight: bold;
 }
 
 .job-text {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 300;
+  line-height: 1.8;
+
+  @include tablets {
+  padding: 0 rem(62px);
+  margin-right: rem(26px);
+  }
 }

@@ -7,10 +7,15 @@
 }
 
 .section__title--menu {
-  top:140px;
-  left: 95px;
+  top:rem(50px);
+  left: rem(250px);
   position: absolute;
   color: #fff;
+
+  @include tablets {
+    top: 5.125rem;
+    left: 1.625rem;
+  }
 }
 
 .menu-view {
@@ -33,8 +38,8 @@
 
 .menu-view__item--active {
   .menu-view__block {
-    width: 540px;
-    padding: 90px 36px 0 40px;
+    width: rem(540px);
+    padding: rem(90px) rem(36px) 0 rem(40px);
     line-height: 1.8;
   }
   .menu-view__trigger-text {
@@ -44,7 +49,7 @@
 
 
 .menu-view__trigger {
-  width: 80px;
+  width: rem(80px);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -58,7 +63,7 @@
   left: 50%;
   color: #fff;
   font-family: 'Gagalin';
-  font-size: 40px;
+  font-size: rem(40px);
   white-space: nowrap;
   line-height: 0;
   z-index: 10;
@@ -67,6 +72,6 @@
 .menu-view__block {
   background-color: rgba(47, 50, 52, 0.93);
   color: #fff;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
 }
