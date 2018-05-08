@@ -16,6 +16,10 @@
     top: 5.125rem;
     left: 1.625rem;
   }
+
+  @include tablets {
+    font-size: rem(50px);
+  }
 }
 
 .menu-view {

@@ -86,6 +86,10 @@
     text-align: center;
     padding: 0 rem(130px);
   }
+
+  @include phones {
+    padding: 0 rem(40px);
+  }
 }
 
 .hero__img, .hero__description {
@@ -127,6 +131,10 @@
     padding-top: 0;
     margin-bottom: rem(17px);
     letter-spacing: rem(2.5px);
+  }
+
+  @include phones {
+  margin-bottom: rem(-3px);
   }
 }
 

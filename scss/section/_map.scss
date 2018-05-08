@@ -21,6 +21,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include phones {
+    top: 88%;
+  }
 }
 
 .footer__content {
@@ -30,14 +34,33 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @include phones {
+  flex-direction: column;
+  }
 }
 
 .footer__col {
   width: 50%;
+
+  @include phones {
+    width: 66%;
+    text-align:  center;
+  }
 }
 
 .footer__col-right {
   text-align: right;
+
+  @include phones {
+    text-align:  center;
+  }
+}
+
+.footer__col-left {
+  @include phones {
+    margin-bottom: rem(10px);
+  }
 }
 
 .footer__adress {

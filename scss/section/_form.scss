@@ -14,6 +14,12 @@
   @include tablets {
   margin-bottom: rem(34px);
   }
+
+  @include phones {
+  text-align: center;
+  font-size: rem(50px);
+  margin-bottom: rem(15px);
+  }
 }
 
 .form {
@@ -52,6 +58,10 @@ textarea {
  @include tablets {
   margin-bottom: rem(15px);
  }
+
+ @include phones {
+  margin-bottom: rem(35px);
+ }
 }
 
 .form__col {
@@ -64,6 +74,11 @@ textarea {
   @include tablets {
     width: 66%;
     margin-right: 0;
+  }
+
+  @include phones {
+  width:100%;
+  margin-bottom: rem(2px);
   }
 }
 
@@ -136,6 +151,10 @@ textarea {
   @include tablets {
   margin-bottom: rem(20px);
   }
+
+  @include phones {
+  margin-bottom: rem(30px);
+  }
 }
 
 .form-pay__check {
@@ -143,6 +162,15 @@ textarea {
 
   @include tablets {
   margin-bottom: rem(40px);
+  }
+}
+
+.form__radio {
+  @include phones {
+  &:last-child {
+    margin-right: 0;
+  }
+  margin-right: rem(25px);
   }
 }
 
@@ -169,6 +197,18 @@ textarea {
   margin-right: rem(20px);
   &:last-child {
     margin-right: rem(0px);
+
+    @include phones {
+      &:last-child {
+        margin-right: rem(0px);
+      }
+    }
+  }
+}
+
+.form__block-mobil {
+  @include phones {
+    display: none;
   }
 }
 
@@ -176,4 +216,12 @@ textarea {
   margin-bottom: rem(8px);
   font-size: rem(14px);
   font-weight: 300;
+}
+
+.form-pay {
+  @include phones {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
 }
