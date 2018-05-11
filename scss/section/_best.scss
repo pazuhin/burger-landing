@@ -24,7 +24,6 @@
 
   @include phones {
   font-size: rem(50px);
-  margin-top: 20%;
   margin-bottom: 5%;
   }
 }
@@ -39,6 +38,31 @@
     }
 }
 
+.description__block {
+  @include phones {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.description__block-right {
+  @include phones {
+    text-align: left;
+    padding-left: 6%;
+  }
+}
+
+.hand {
+  @include phones {
+    margin-bottom: 45px;
+  }
+}
+
+.margin-hand {
+  @include phones {
+    padding: 0 9%;
+  }
+}
 .description__item {
     display: flex;
     flex-direction: column;
@@ -54,10 +78,9 @@
     }
 
     @include phones {
-    position: relative;
     max-width: none;
+    margin-bottom: 45px;
     margin-left: 0;
-    margin-bottom: rem(50px);
     }
 }
 
@@ -73,9 +96,8 @@
     font-family: 'Ubuntu';
     line-height: 1.8;
 
-    @include phones {
-      padding-left: 28%;
-      text-align: left;
+    @include tablets {
+    font-size: rem(12px);
     }
 }
 
@@ -86,10 +108,6 @@
     @include tablets {
       margin-bottom: rem(28px);
     }
-
-    @include phones {
-      position: absolute;
-    }
 }
 
 .description__some--natural {
@@ -97,10 +115,6 @@
 
     @include tablets {
     margin-bottom: rem(6px);
-    }
-
-    @include phones {
-    padding-left: 25%;
     }
 }
 

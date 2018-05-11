@@ -28,7 +28,7 @@
   top: 0;
   bottom: 0;
   display: flex;
-  max-width: 50%;
+  max-width: 100%;
 }
 
 .menu-view__item {
@@ -45,6 +45,14 @@
     width: rem(540px);
     padding: rem(90px) rem(36px) 0 rem(40px);
     line-height: 1.8;
+
+    @include tablets {
+    width: 21.25rem;
+    }
+
+    @include phones {
+    width: 100%;
+    }
   }
   .menu-view__trigger-text {
     color: $yellow;

@@ -40,17 +40,18 @@
 }
 
 .review {
-  padding: rem(50px) rem(70px) rem(50px) rem(40px);
+  padding: 0 7%;
   opacity: 0;
   transform: scale(0.9);
   display: flex;
-  justify-content:space-around;
-  align-items: flex-start;
+  justify-content:center;
+  align-items: center;
   flex-direction: column;
 
-  @include tablets {
-    padding: 3.125rem rem(45px) 3.125rem 4.5rem;
+  @include phones {
+    text-align: center;
   }
+
 }
 
 h3 {

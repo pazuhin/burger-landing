@@ -80,21 +80,23 @@
   flex-grow: 1;
   align-items: center;
   padding-bottom: 15%;
+  justify-content: center;
 
   @include tablets {
     flex-direction: column;
     text-align: center;
-    padding: 0 rem(130px);
   }
 
   @include phones {
-    padding: 0 rem(40px);
+    padding-bottom:0;
+    justify-content: flex-start;
   }
 }
 
 .hero__img, .hero__description {
   flex-basis: 50%;
   display: flex;
+  text-align: center;
 }
 
 .hero__img {
@@ -105,6 +107,10 @@
 
   @include tablets {
   margin-bottom: rem(20px);
+  }
+
+  @include phones {
+  padding: 0 10%;
   }
 }
 
@@ -135,6 +141,7 @@
 
   @include phones {
   margin-bottom: rem(-3px);
+  font-size: rem(60px);
   }
 }
 
@@ -147,6 +154,10 @@
     @include tablets {
       font-size: 4rem;
     }
+
+    @include phones {
+    font-size: rem(60px);
+    }
 }
 
 .scroll-btn {
@@ -154,8 +165,7 @@
     width: rem(30px);
     height: rem(30px);
     bottom: 0;
-    right: 50%;
-    bottom: 5%;
+    bottom: 2%;
 }
 
 .scroll-btn:hover {
