@@ -60,9 +60,16 @@
 
 .margin-hand {
   @include phones {
-    padding: 0 9%;
+    padding-left: 12%;
   }
 }
+
+.margin-list {
+  @include phones {
+    padding-left: 7%;
+  }
+}
+
 .description__item {
     display: flex;
     flex-direction: column;

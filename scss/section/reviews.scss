@@ -45,7 +45,7 @@
   transform: scale(0.9);
   display: flex;
   justify-content:center;
-  align-items: center;
+  align-items: start;
   flex-direction: column;
 
   @include phones {
@@ -75,6 +75,7 @@ h3 {
   color: #fff;
   text-align: left;
   line-height: 1.76;
+  margin-bottom: rem(20px);
 
   @include tablets {
     text-align: center;
