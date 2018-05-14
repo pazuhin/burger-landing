@@ -10,5 +10,5 @@ btn.addEventListener('click', function(e) {
 
 btnClose.addEventListener('click', function(e) {
   e.preventDefault();
-  mobilPage.style.top = currentTop + 900 + 'px';
+  mobilPage.style.top = currentTop + 9999 + 'px';
 });
