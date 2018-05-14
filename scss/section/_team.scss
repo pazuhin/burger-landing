@@ -6,7 +6,7 @@
   position: relative;
 }
 
-.absolut {
+.team__section {
   position: absolute;
   top: 0;
   right: 0;
@@ -45,7 +45,7 @@
   color: #fff;
 }
 
-.accordeon__trigger {
+.team-acco__trigger {
   font-family: 'Gagalin';
   font-size: rem(14px);
   color: #fff;
@@ -70,7 +70,7 @@
   }
 }
 
-.accordeon {
+.team-acco {
   @include tablets {
     padding: 0 10%;
   }
@@ -80,7 +80,7 @@
   }
 }
 
- .accordeon__item--active {
+ .team-acco__item--active {
    .person {
      height: auto;
      padding-left: rem(20px);
@@ -91,8 +91,8 @@
       padding-left: 0;
       }
    }
- 
-   .accordeon__trigger {
+
+   .team-acco__trigger {
      color: $yellow;
    }
 
@@ -120,12 +120,12 @@
     }
 }
 
-.accordeon__item {
+.team-acco__item {
   position: relative;
   margin-bottom: 1.1875rem;
 }
 
-.accordeon__item:before {
+.team-acco__item:before {
   content: "";
   display: inline-block;
   border-top: rem(6px) solid $yellow;

@@ -181,6 +181,10 @@ textarea {
 
 .form__btns-order {
   margin-right: rem(10px);
+
+  .order-link {
+    border:none;
+  }
 }
 
 .form-pay__btns {

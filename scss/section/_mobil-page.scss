@@ -1,0 +1,79 @@
+.mobil-page {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: rem(999px);
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background: #2f3234;
+  height: 100%;
+  transition: 0.3s;
+
+  .header__logo {
+    position: absolute;
+    top: rem(10px);
+    left: rem(20px);
+  }
+}
+
+.mobil-menu {
+  text-align: center;
+}
+
+.mobil-menu__item {
+  &:after {
+    display: flex;
+    content: ' ';
+    @include circle(rem(6px), #fff);
+    margin: 0 auto;
+  }
+
+  &:last-child:after {
+    display: none;
+  }
+  margin-bottom: rem(10px);
+}
+
+.mobil-menu__link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-size: rem(24px);
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: rem(10px);
+}
+
+.close{
+    position: absolute;
+    top: rem(30px);
+    right: rem(11px);
+    width: rem(40px);
+    height: rem(40px);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.close:before,
+.close:after {
+    content: "";
+    position: absolute;
+    top: rem(18px);
+    left: rem(8px);
+    width: rem(26px);
+    height: rem(4px);
+    background: #c1c2c2;
+    border-radius: rem(5px);
+}
+
+.close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
