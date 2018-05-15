@@ -80,26 +80,26 @@
   }
 }
 
- .team-acco__item--active {
-   .person {
-     height: auto;
-     padding-left: rem(20px);
-     margin-bottom: rem(30px);
-
-
-    @include phones {
-      padding-left: 0;
-      }
-   }
-
-   .team-acco__trigger {
-     color: $yellow;
-   }
-
-   &:before {
-     transform: rotate(180deg);
-   }
-}
+ // .team-acco__item--active {
+//    .person {
+//      height: auto;
+//      padding-left: rem(20px);
+//      margin-bottom: rem(30px);
+//
+//
+//     @include phones {
+//       padding-left: 0;
+//       }
+//    }
+//
+//    .team-acco__trigger {
+//      color: $yellow;
+//    }
+//
+//    &:before {
+//      transform: rotate(180deg);
+//    }
+// }
 
 .person__avatar {
     width: 6.25rem;

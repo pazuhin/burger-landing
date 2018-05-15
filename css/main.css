@@ -567,7 +567,8 @@ ul {
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  position: relative; }
   @media screen and (max-width: 480px) {
     .burger__container {
       padding-top: 20%; } }
@@ -960,22 +961,6 @@ td:first-child {
 @media screen and (max-width: 480px) {
   .team-acco {
     padding: 0; } }
-
-.team-acco__item--active .person {
-  height: auto;
-  padding-left: 1.25rem;
-  margin-bottom: 1.875rem; }
-  @media screen and (max-width: 480px) {
-    .team-acco__item--active .person {
-      padding-left: 0; } }
-
-.team-acco__item--active .team-acco__trigger {
-  color: #f8b43a; }
-
-.team-acco__item--active:before {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
 
 .person__avatar {
   width: 6.25rem;
