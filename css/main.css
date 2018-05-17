@@ -1041,7 +1041,13 @@ td:first-child {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .section__title--menu {
   top: 3.125rem;
@@ -1057,14 +1063,10 @@ td:first-child {
       font-size: 3.125rem; } }
 
 .menu-acco {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: 100%; }
+  z-index: 5; }
 
 .menu-acco__item {
   display: -webkit-box;
@@ -1075,32 +1077,53 @@ td:first-child {
   width: 0;
   overflow: hidden; }
 
-.menu-acco__item--active .menu-acco__block {
-  width: 33.75rem;
+@media screen and (max-width: 480px) {
+  .menu-acco__item.menu-acco__item--active {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99; } }
+
+.menu-acco__item.menu-acco__item--active .menu-acco__trigger-text {
+  color: #f8b43a; }
+
+.menu-acco__item.menu-acco__item--active .menu-acco__block {
   padding: 5.625rem 2.25rem 0 2.5rem;
-  line-height: 1.8; }
+  line-height: 1.8;
+  -webkit-transition: width 0.5s;
+  -o-transition: width 0.5s;
+  transition: width 0.5s;
+  width: 33.75rem; }
   @media screen and (max-width: 768px) {
-    .menu-acco__item--active .menu-acco__block {
+    .menu-acco__item.menu-acco__item--active .menu-acco__block {
       width: 21.25rem; } }
   @media screen and (max-width: 480px) {
-    .menu-acco__item--active .menu-acco__block {
-      width: 100%; } }
-
-.menu-acco__item--active .menu-acco__trigger-text {
-  color: #f8b43a; }
+    .menu-acco__item.menu-acco__item--active .menu-acco__block {
+      width: 100%;
+      padding: 3rem 1rem;
+      min-width: 13.75rem; } }
 
 .menu-acco__trigger {
   width: 5rem;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  text-decoration: none; }
+  @media screen and (max-width: 768px) {
+    .menu-acco__trigger {
+      width: 4rem; } }
 
 .menu-acco__trigger-text {
-  position: absolute;
   -webkit-transform-origin: left top;
   -ms-transform-origin: left top;
   transform-origin: left top;
-  top: 90%;
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -1108,9 +1131,7 @@ td:first-child {
   color: #fff;
   font-family: 'Gagalin';
   font-size: 2.5rem;
-  white-space: nowrap;
-  line-height: 0;
-  z-index: 10; }
+  white-space: nowrap; }
 
 .menu-acco__block {
   background-color: rgba(47, 50, 52, 0.93);

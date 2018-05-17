@@ -4,6 +4,8 @@
   background-position: center center;
   background-size: cover;
   position: relative;
+  justify-content: flex-end;
+  display: flex;
 }
 
 .section__title--menu {
@@ -23,12 +25,8 @@
 }
 
 .menu-acco {
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
   display: flex;
-  max-width: 100%;
+  z-index: 5;
 }
 
 .menu-acco__item {
@@ -40,45 +38,65 @@
   overflow: hidden;
 }
 
-.menu-acco__item--active {
-  .menu-acco__block {
-    width: rem(540px);
-    padding: rem(90px) rem(36px) 0 rem(40px);
-    line-height: 1.8;
+.menu-acco__item {
 
-    @include tablets {
-    width: 21.25rem;
-    }
+  &.menu-acco__item--active {
 
     @include phones {
-    width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    .menu-acco__trigger-text {
+      color: $yellow;
+    }
+
+    .menu-acco__block {
+      padding: rem(90px) rem(36px) 0 rem(40px);
+      line-height: 1.8;
+      transition: width 0.5s;
+      width: 33.75rem;
+
+      @include tablets {
+      width: 21.25rem;
+      }
+
+      @include phones {
+      width: 100%;
+      padding: 3rem 1rem;
+      min-width: 13.75rem;
+      }
     }
   }
-  .menu-acco__trigger-text {
-    color: $yellow;
-  }
 }
-
 
 .menu-acco__trigger {
   width: rem(80px);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+
+  @include tablets {
+  width: 4rem;
+  }
 }
 
 .menu-acco__trigger-text {
-  position: absolute;
   transform-origin: left top;
-  top: 90%;
   transform: rotate(-90deg);
   left: 50%;
   color: #fff;
   font-family: 'Gagalin';
   font-size: rem(40px);
   white-space: nowrap;
-  line-height: 0;
-  z-index: 10;
+
+
 }
 
 .menu-acco__block {
