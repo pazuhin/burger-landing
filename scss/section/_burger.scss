@@ -13,6 +13,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  width: calc(100% - 3rem);
 
   @include phones {
       padding-top: 20%;
@@ -70,8 +71,8 @@
   padding: 5rem 0;
 
   @include tablets {
-    margin-bottom: 2%;
-    padding: 0;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -137,24 +138,21 @@
   transform: translateY(-8px);
 }
 
-.scroll-btn {
-  position: absolute;
-  bottom: 0;
-}
-
 .scroll-btn-left {
   position: absolute;
   top: 50%;
   left: -1.5rem;
+  padding-top: rem(7px);
+  cursor: pointer;
 
   @include tablets {
-    left: 0.5rem;
+    left: -1.5rem;
     top: 45%;
   }
 
   @include phones {
-    top: 36%;
-    left: -0.5rem;
+    top: 50%;
+    left: -1.5rem;
   }
 }
 
@@ -171,15 +169,17 @@
   position: absolute;
   top: 50%;
   right: -1.5rem;
+  padding-top: rem(7px);
+  cursor: pointer;
 
   @include tablets {
-    right: 0.5rem;
+    right: -1.5rem;
     top: 45%;
   }
 
   @include phones {
-    right: -0.5rem;
-    top: 36%;
+    right: -1.5rem;
+    top: 50%;
   }
 }
 
@@ -207,12 +207,12 @@
   }
 
   @include tablets {
-    top: -12%;
+    top: 0;
     left: 17%;
   }
 
   @include phones {
-    top: -17%;
+    top: 0;
     left: 0;
   }
 }
@@ -249,17 +249,15 @@
   justify-content: center;
 
     @include tablets {
-      bottom: 100%;
       left: 73%;
       right: auto;
-      top: auto;
+      top: 0;
     }
 
     @include phones {
-      bottom: 100%;
       left: 80%;
       right: auto;
-      top: auto;
+      top: 0;
     }
 }
 

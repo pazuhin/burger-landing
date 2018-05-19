@@ -92,7 +92,7 @@ menuAcco.addEventListener('click', function(e) {
         contents[i].style.width = 0;
       }
 
-      content.style.width = '100%';
+      content.style.width = '400px';
 
     } else {
       item.classList.remove('menu-acco__item--active');
@@ -120,3 +120,48 @@ window.addEventListener('resize', function() {
 //       }
 //     }
 // });
+
+
+
+//review-mobilPage
+
+var reviews_list = document.querySelector('.reviews__list');
+var review_page = document.querySelector('.review_page');
+
+reviews_list.addEventListener('click', function(e) {
+  e.preventDefault();
+  var target = e.target;
+
+  if(target.classList.contains('review__btn-link')){
+
+    if(!review_page.classList.contains('is-active')) {
+
+      review_page.classList.add('is-active');
+
+      } else {
+      review_page.classList.remove('is-active');
+    }
+  }
+
+  if(target.classList.contains('review__btn-lin-mobil')){
+
+    if(!review_page.classList.contains('is-active')) {
+
+      review_page.classList.add('is-active');
+
+      } else {
+      review_page.classList.remove('is-active');
+    }
+  }
+});
+
+var close = review_page.querySelector('.content__close');
+close.addEventListener('click', function() {
+  review_page.classList.remove('is-active');
+});
+
+review_page.addEventListener('click', function(e){
+  if(e.target === review_page){
+    review_page.classList.remove('is-active');
+  }
+});

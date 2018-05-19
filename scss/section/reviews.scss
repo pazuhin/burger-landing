@@ -4,6 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     align-items: stretch;
+    position: relative;
 }
 
 .reviews__item {
@@ -138,5 +139,6 @@ h3 {
 
   @include phones {
   display: block;
+  margin: 0 auto;
   }
 }

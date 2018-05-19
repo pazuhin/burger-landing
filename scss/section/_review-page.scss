@@ -1,0 +1,74 @@
+.review_page {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(62, 61, 59, 0.8);;
+  height: 100%;
+  transition: 0.3s;
+  display: none;
+}
+
+.is-active {
+  display: flex;
+}
+
+.content {
+  width: rem(460px);
+  height: rem(255px);
+  background: #fff;
+  border-radius: rem(5px);
+  display: flex;
+  flex-direction: column;
+  padding: rem(25px) rem(15px);
+  position: relative;
+}
+
+.content__title {
+  margin-bottom: rem(25px);
+  font-family: 'Gagalin';
+  font-size: rem(14px);
+}
+
+.content__text {
+  font-weight: 300;
+  font-size: rem(14px);
+  text-align: left;
+  line-height: 1.76;
+  color: black;
+}
+
+.content__close {
+    position: absolute;
+    top: rem(15px);
+    right: rem(15px);
+    width: rem(20px);
+    height: rem(20px);
+    cursor: pointer;
+    z-index: 999;
+}
+
+.content__close:before,
+.content__close:after {
+    content: "";
+    position: absolute;
+    top: rem(10px);
+    left: 0;
+    width: rem(20px);
+    height: rem(4px);
+    background: #ec8468;
+    border-radius: rem(5px);
+}
+
+.content__close:before {
+    webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.content__close:after {
+    webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

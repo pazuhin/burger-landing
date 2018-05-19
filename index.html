@@ -218,11 +218,13 @@
               </li>
               </ul>
             </div>
-            <div class="scroll-btn scroll-btn-left">
-              <a href="#" class="scroll-btn__link"><img class="scroll-btn-pre" src="img/content/arrow-scroll.png" alt="scroll"></a>
-            </div>
-            <div class="scroll-btn scroll-btn-right">
-              <a href="#" class="scroll-btn__link"><img class="scroll-btn-next" src="img/content/arrow-scroll.png" alt="scroll"></a>
+            <div class="slider__controls">
+              <div class="scroll-btn scroll-btn-left">
+                <a href="#" class="scroll-btn__link"><img class="scroll-btn-pre" src="img/content/arrow-scroll.png" alt="scroll"></a>
+              </div>
+              <div class="scroll-btn scroll-btn-right">
+                <a href="#" class="scroll-btn__link"><img class="scroll-btn-next" src="img/content/arrow-scroll.png" alt="scroll"></a>
+              </div>
             </div>
           </div>
         </section>
@@ -241,10 +243,10 @@
                         <img class="visuallyhidden" src="img/content/team-avatar.jpg" alt="Daniel Redclif">
                       </div>
                       <div class="person__text">
-                        <div class="prof">
+                        <div class="person__prof">
                           Оператор
                         </div>
-                        <div class="job-text">
+                        <div class="person__job-text">
                           С радостью поможет подобрать идеальный бургер и оформить заказ
                         </div>
                       </div>
@@ -257,10 +259,10 @@
                         <img class="visuallyhidden" src="img/content/team-avatar.jpg" alt="Daniel Redclif">
                       </div>
                       <div class="person__text">
-                        <div class="prof">
+                        <div class="person__prof">
                           Оператор
                         </div>
-                        <div class="job-text">
+                        <div class="person__job-text">
                           С радостью поможет подобрать идеальный бургер и оформить заказ
                         </div>
                       </div>
@@ -273,10 +275,10 @@
                         <img class="visuallyhidden" src="img/content/team-avatar.jpg" alt="Daniel Redclif">
                       </div>
                       <div class="person__text">
-                        <div class="prof">
+                        <div class="person__prof">
                           Оператор
                         </div>
-                        <div class="job-text">
+                        <div class="person__job-text">
                           С радостью поможет подобрать идеальный бургер и оформить заказ
                         </div>
                       </div>
@@ -289,10 +291,10 @@
                         <img class="visuallyhidden" src="img/content/team-avatar.jpg" alt="Daniel Redclif">
                       </div>
                       <div class="person__text">
-                        <div class="prof">
+                        <div class="person__prof">
                           Оператор
                         </div>
-                        <div class="job-text">
+                        <div class="person__job-text">
                           С радостью поможет подобрать идеальный бургер и оформить заказ
                         </div>
                       </div>
@@ -455,43 +457,43 @@
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__title">Имя</div>
-                  <input class="active" type="text" id="name" value="">
+                  <input type="text" id="name" value="">
                 </label>
                 <label class="form__block">
                   <div class="form__title">Телефон</div>
-                  <input class="active" type="text" id="name" value="">
+                  <input type="text" id="name" value="">
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <div class="form__title">Улица</div>
-                  <input class="active" type="text" id="name" value="">
+                  <input type="text" id="name" value="">
                 </label>
              </div>
             <div class="form__row">
               <label class="form__block">
                 <div class="form__title">Дом</div>
-                <input class="active" type="text" id="name" value="">
+                <input type="text" id="name" value="">
               </label>
               <label class="form__block">
                 <div class="form__title">Корпус</div>
-                <input class="active" type="text" id="name" value="">
+                <input type="text" id="name" value="">
               </label>
               <label class="form__block flat">
                 <div class="form__title">Квартира</div>
-                <input class="active" type="text" id="name" value="">
+                <input type="text" id="name" value="">
               </label>
               <label class="form__block form__block-mobil">
                 <div class="form__title">Этаж</div>
-                <input class="active" type="text" id="name" value="">
+                <input type="text" id="name" value="">
               </label>
             </div>
           </div>
           <div class="form__col">
              <div class="form__title">Комментарий</div>
               <textarea></textarea>
-              <div class="form-pay">
-                <div class="form-pay__radio">
+              <div class="form__pay">
+                <div class="form__radio">
                   <label class="form__radio">
                       <input type="radio" name="radiobutton" id="" class="form__radio-elem visuallyhidden">
                       <div class="form__radio-fake"></div>
@@ -503,14 +505,14 @@
                         <div class="form__radio-text">Оплатить картой</div>
                   </label>
                 </div>
-              <div class="form-pay__check">
+              <div class="form__check">
                 <label class="form__check">
                     <input type="checkbox" name="checkbox" id="" class="form__check-elem visuallyhidden">
                     <div class="form__check-fake"></div>
                     <div class="form__check-text">Не перезванивать</div>
                 </label>
               </div>
-              <div class="form-pay__btns">
+              <div class="form__btns">
                 <div class="form__btns-order">
                   <button type="button" name="button" class="order-link">Заказать</button>
                 </div>
@@ -620,6 +622,14 @@
         </div>
           <div class="close"></div>
         </div>
+    </div>
+    <div class="review_page">
+      <div class="content">
+        <div class="content__title">Константин Спилберг</div>
+        <div class="content__text">Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
+        </div>
+        <div class="content__close"></div>
+      </div>
     </div>
     <script src="js/main.js"></script>
   </body>
