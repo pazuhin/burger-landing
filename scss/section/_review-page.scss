@@ -10,6 +10,7 @@
   height: 100%;
   transition: 0.3s;
   display: none;
+  padding: 0 2rem;
 }
 
 .is-active {
@@ -18,7 +19,7 @@
 
 .content {
   width: rem(460px);
-  height: rem(255px);
+  min-height: rem(255px);
   background: #fff;
   border-radius: rem(5px);
   display: flex;

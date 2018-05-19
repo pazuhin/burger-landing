@@ -24,8 +24,19 @@
   position: relative;
 }
 
+.slider__list {
+  left: 0;
+}
+
 .burger__item {
   position: relative;
+
+  &:nth-child(1) {
+  background-color: #E7B6DB;
+}
+  &:nth-child(2) {
+  background-color: #E7B234;
+  }
 }
 
 .burger__content {

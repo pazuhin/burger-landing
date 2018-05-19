@@ -62,6 +62,7 @@
 .person {
   height: 0;
   overflow: hidden;
+  transition: 1s;
 
   @include tablets {
     flex-direction: column;
@@ -134,6 +135,7 @@
   border-left: rem(6px) solid transparent;
   transition: 0.3s;
   margin-right: rem(5px);
+  transition: 1s;
 }
 
 .person__text {
