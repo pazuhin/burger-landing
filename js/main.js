@@ -65,85 +65,77 @@ section.addEventListener('click', function(e) {
 
 //acco-menu
 
-var menuAcco = document.querySelector('.menu-acco');
-var items = menuAcco.getElementsByClassName('menu-acco__item');
-var contentsMenu = menuAcco.getElementsByClassName('menu-acco__block');
-//var section = document.querySelector('.team__section');
+var accordion = document.getElementById("accordion");
+var i;
 
-
-menuAcco.addEventListener('click', function(e) {
+accordion.addEventListener("click", function(e) {
   e.preventDefault();
-  var target = e.target;
+  var contentWidth = '540px';
+  var items = accordion.getElementsByClassName("menu-acco__item"),
+    contents = accordion.getElementsByClassName("menu-acco__block");
 
-  if(target.classList.contains('menu-acco__trigger')) {
 
-    var content = target.nextElementSibling;
-    var item = target.parentNode;
-    var contentWidth = parseInt(content.style.width);
 
-    if(!item.classList.contains('menu-acco__item--active')) {
+  if (e.target.classList.contains("menu-acco__trigger") || e.target.classList.contains("menu-acco__trigger-text")) {
 
-      for (var i = 0; i < items.length; i++) {
-        items[i].classList.remove('menu-acco__item--active');
+    var trigger;
+
+    if (e.target.classList.contains("menu-acco__trigger")) {
+      trigger = e.target;
+    } else {
+      trigger = e.target.parentNode;
+    }
+
+    var content = trigger.nextElementSibling;
+    var item = trigger.parentNode;
+    var textContents = content.firstElementChild;
+
+
+     console.log("window.innerWidth");
+     console.log(window.innerWidth);
+     console.log("textContents.offsetWidth");
+     console.log(textContents.clientWidth);
+
+
+    if(window.innerWidth<740){
+       contentWidth = window.innerWidth - (trigger.offsetWidth * items.length) + 'px';
+
+    }
+
+    if (!item.classList.contains("menu-acco__item--active")) {
+      for (i = 0; i < items.length; i++) {
+        items[i].classList.remove("menu-acco__item--active");
       }
-      item.classList.add('menu-acco__item--active');
 
-      for (var i = 0; i < contentsMenu.length; i++) {
-        contentsMenu[i].style.width = 0;
+      item.classList.add("menu-acco__item--active");
+
+
+      for (i = 0; i < contents.length; i++) {
+        contents[i].style.width = null;
       }
 
-      content.style.width = '400px';
+      content.style.width = contentWidth;
+      textContents.style.width = contentWidth;
 
     } else {
-      item.classList.remove('menu-acco__item--active');
-      content.style.width = 0;
+      item.classList.remove("menu-acco__item--active");
+      content.style.width = null;
     }
   }
 });
-
-window.addEventListener('resize', function() {
-  var client_w = document.body.clientWidth;
-
-
-  if(client_w <=768) {
-    color = 'red';
-  }
-});
-
-// section.addEventListener('click', function(e) {
-//   var targetClose = e.target;
-//
-//   if(!targetClose.classList.contains('team-acco__trigger')) {
-//       for (var i = 0; i < items.length; i++) {
-//         items[i].classList.remove('team-acco__item--active');
-//         contents[i].style.height = 0;
-//       }
-//     }
-// });
 
 
 
 //review-mobilPage
 
 var reviews_list = document.querySelector('.reviews__list');
-var review_page = document.querySelector('.review_page');
+var review_page = document.querySelector('.review-page');
 
 reviews_list.addEventListener('click', function(e) {
   e.preventDefault();
   var target = e.target;
 
-  if(target.classList.contains('review__btn-link')){
-
-    if(!review_page.classList.contains('is-active')) {
-
-      review_page.classList.add('is-active');
-
-      } else {
-      review_page.classList.remove('is-active');
-    }
-  }
-
-  if(target.classList.contains('review__btn-lin-mobil')){
+  if(target.classList.contains('review__btn-link') || target.classList.contains('review__btn-lin-mobil')){
 
     if(!review_page.classList.contains('is-active')) {
 
@@ -167,7 +159,7 @@ review_page.addEventListener('click', function(e){
 });
 
 
-//slider__controls
+//slider
 
 var leftArrow = document.querySelector('.scroll-btn__link--left');
 var rightArrow = document.querySelector('.scroll-btn__link--right');
@@ -183,7 +175,7 @@ leftArrow.addEventListener('click', function (e) {
   console.log(size);
 
 
-    if (start > 1) {
+    if (start > 1 && currentLeft % size == 0) {
       sliderList.style.left = currentLeft + size + 'px';
       start--;
 
@@ -206,4 +198,12 @@ console.log(currentLeft);
       sliderList.style.left = 0 + 'px';
       start = 1;
     }
-})
+});
+
+window.addEventListener('resize', function() {
+  size = parseInt(getComputedStyle(slider).width);
+  console.log("size: " + size);
+  console.log("start: " + start);
+  console.log(-size * start);
+  sliderList.style.left = -size * (start-1) + 'px';
+});

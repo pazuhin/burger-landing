@@ -22,20 +22,46 @@
 
 .slider {
   position: relative;
+  display: flex;
+  overflow: hidden;
+  width: rem(940px);
+
+  // @media (max-width: 950px) {
+  //   width: rem(800px);
+  // }
+
+  @include tablets {
+    width: rem(640px);
+  }
+
+  @include phones {
+    width: rem(460px);
+  }
 }
 
 .slider__list {
   left: 0;
+  position: relative;
+  display: flex;
+  height: 100%;
+  transition: 0.7s;
 }
 
 .burger__item {
   position: relative;
+  width: rem(940px);
+  height: 100%;
 
-  &:nth-child(1) {
-  background-color: #E7B6DB;
-}
-  &:nth-child(2) {
-  background-color: #E7B234;
+  // @media (max-width: 950px) {
+  //   width: rem(800px);
+  // }
+
+  @include tablets {
+    width: rem(640px);
+  }
+
+  @include phones {
+    width: rem(460px);
   }
 }
 
@@ -196,7 +222,7 @@
 
 .burger__mixed {
   position: absolute;
-  top: -6%;
+  top: 0;
   left: 3%;
   width: rem(90px);
   height: rem(90px);
@@ -247,7 +273,7 @@
 
 .burger__kkal {
   position: absolute;
-  bottom: -10%;
+  bottom: 0;
   left: 2%;
   right: auto;
   top: auto;
