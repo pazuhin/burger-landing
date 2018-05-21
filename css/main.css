@@ -572,9 +572,6 @@ ul {
   align-items: center;
   position: relative;
   width: calc(100% - 3rem); }
-  @media screen and (max-width: 480px) {
-    .burger__container {
-      padding-top: 20%; } }
 
 .slider {
   position: relative;
@@ -582,35 +579,33 @@ ul {
   display: -ms-flexbox;
   display: flex;
   overflow: hidden;
-  width: 58.75rem; }
+  width: 100%; }
   @media screen and (max-width: 768px) {
     .slider {
       width: 40rem; } }
   @media screen and (max-width: 480px) {
     .slider {
-      width: 28.75rem; } }
+      width: 100%; } }
 
 .slider__list {
   left: 0;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 100%;
   -webkit-transition: 0.7s;
   -o-transition: 0.7s;
-  transition: 0.7s; }
+  transition: 0.7s;
+  display: -webkit-box;
+  width: 100%; }
 
 .burger__item {
   position: relative;
-  width: 58.75rem;
   height: 100%; }
   @media screen and (max-width: 768px) {
     .burger__item {
       width: 40rem; } }
   @media screen and (max-width: 480px) {
     .burger__item {
-      width: 28.75rem; } }
+      width: 100%; } }
 
 .burger__content {
   display: -webkit-box;
@@ -656,7 +651,7 @@ ul {
     @media screen and (max-width: 480px) {
       .burger__description .section__title {
         font-size: 3.125rem;
-        margin-bottom: 1.875rem; } }
+        margin-bottom: 0.625rem; } }
 
 .burger__img {
   max-width: 100%;
@@ -858,7 +853,7 @@ ul {
       top: 0; } }
   @media screen and (max-width: 480px) {
     .burger__kkal {
-      left: 80%;
+      left: 75%;
       right: auto;
       top: 0; } }
 
@@ -886,7 +881,12 @@ table {
   top: 0%;
   left: 100%;
   padding: 15%;
-  display: none; }
+  display: none;
+  z-index: 99; }
+  @media screen and (max-width: 480px) {
+    table {
+      width: 12rem;
+      font-size: 0.6875rem; } }
 
 tr {
   display: -webkit-box;
@@ -905,6 +905,9 @@ td:last-child {
 
 td:first-child {
   margin-right: 0.9375rem; }
+  @media screen and (max-width: 480px) {
+    td:first-child {
+      margin-right: 0; } }
 
 .sauce, .beef {
   fill: #e25028; }

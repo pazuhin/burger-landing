@@ -14,54 +14,42 @@
   align-items: center;
   position: relative;
   width: calc(100% - 3rem);
-
-  @include phones {
-      padding-top: 20%;
-  }
 }
 
 .slider {
   position: relative;
   display: flex;
   overflow: hidden;
-  width: rem(940px);
-
-  // @media (max-width: 950px) {
-  //   width: rem(800px);
-  // }
+  width: 100%;
 
   @include tablets {
     width: rem(640px);
   }
 
   @include phones {
-    width: rem(460px);
+    width: 100%;
   }
 }
 
 .slider__list {
   left: 0;
   position: relative;
-  display: flex;
   height: 100%;
   transition: 0.7s;
+  display: -webkit-box;
+  width: 100%;
 }
 
 .burger__item {
   position: relative;
-  width: rem(940px);
   height: 100%;
-
-  // @media (max-width: 950px) {
-  //   width: rem(800px);
-  // }
 
   @include tablets {
     width: rem(640px);
   }
 
   @include phones {
-    width: rem(460px);
+    width: 100%;
   }
 }
 
@@ -95,7 +83,7 @@
 
     @include phones {
       font-size: rem(50px);
-      margin-bottom: rem(30px);
+      margin-bottom: rem(10px);
     }
   }
 }
@@ -292,7 +280,7 @@
     }
 
     @include phones {
-      left: 80%;
+      left: 75%;
       right: auto;
       top: 0;
     }
@@ -325,6 +313,12 @@ table {
   left: 100%;
   padding: 15%;
   display: none;
+  z-index: 99;
+
+  @include phones {
+  width: 12rem;
+  font-size: rem(11px);
+  }
 }
 
 
@@ -343,6 +337,10 @@ td {
 
   &:first-child {
     margin-right: rem(15px);
+
+    @include phones {
+    margin-right: 0;
+    }
   }
 }
 
