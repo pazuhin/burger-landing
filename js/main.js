@@ -207,3 +207,68 @@ window.addEventListener('resize', function() {
   console.log(-size * start);
   sliderList.style.left = -size * (start-1) + 'px';
 });
+
+
+//подключение яндекс карты
+
+ymaps.ready(init);
+
+var placemarks = [
+  {
+    latitude: 57.77,
+    longitude: 40.93,
+    hintContent: '<div class="map__hint">Мира пр-кт д.7</div>',
+    balloonContent: ['<div class="map__balloon">Самые вкусные бургеры по адресу: Мира пр-кт д.7</div>']
+  },
+  {
+    latitude: 57.787,
+    longitude: 40.865,
+    hintContent: '<div class="map__hint">ш.Некрасовское д.58</div>',
+    balloonContent: ['<div class="map__balloon">Самые вкусные бургеры по адресу: ш.Некрасовское д.58</div>']
+  },
+  {
+    latitude: 57.760,
+    longitude: 40.960,
+    hintContent: '<div class="map__hint">ул.Советская  д.103б</div>',
+    balloonContent: ['<div class="map__balloon">Самые вкусные бургеры по адресу: ул.Советская  д.103б</div>']
+  }
+],
+  geoObjects = [];
+
+function init() {
+  var map = new ymaps.Map('map', {
+    center: [57.77, 40.90],
+    zoom: 12,
+    //controls: []
+    behaviors: ['drag']
+  });
+
+  for (var i = 0; i < placemarks.length; i++) {
+        geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude],
+        {
+        hintContent: placemarks[i].hintContent,
+        balloonContent: placemarks[i].balloonContent} ,
+        {
+          iconLayout: 'default#image',
+          iconImageHref: 'img/content/map-icon.png',
+          iconImageSize: [46, 57],
+          iconImageOffset: [-10, -100]
+        });
+    }
+
+      var clasterer = new ymaps.Clusterer({
+        clusterIcons: [
+          {
+            href: 'img/content/drops.png',
+            size: [70, 70],
+            offset: [-50, -50]
+          }
+        ],
+        clusterIconContentLayout: null
+
+      });
+
+      map.geoObjects.add(clasterer);
+      //map.geoObjects.add(placemark);
+      clasterer.add(geoObjects);
+  }

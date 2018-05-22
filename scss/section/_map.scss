@@ -1,9 +1,4 @@
 .map {
-  background-image: url('../img/bg/bg-map.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  position: relative;
   color: #fff;
 }
 
@@ -20,6 +15,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.4375rem 0;
+  z-index: 99;
 }
 
 .footer__content {
