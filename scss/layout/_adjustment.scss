@@ -2,12 +2,14 @@
   position: relative;
   overflow: hidden;
   width: 100%;
-  min-height: 100%;
+  height: 100%;
 }
 
 .maincontent {
   height: 100%;
   min-height: rem(650px);
+  transition: 0.7s;
+  will-change: transform;
 }
 
 .container {
@@ -21,7 +23,7 @@
 }
 
 .section {
-  height: 100vh;
+  height: 100%;
   background-color: rgba(0,0,0,0.31);
   min-height: rem(650px);
 }
@@ -48,6 +50,7 @@
     position: fixed;
     right: rem(50px);
     top: rem(110px);
+    z-index: 99999;
 
     @include tablets {
       display: none;
@@ -56,6 +59,17 @@
 
 .sidebar__item {
     margin-bottom: rem(15px);
+
+    &.active {
+		.sidebar__link {
+			&:after {
+        height: rem(14px);
+        width: rem(14px);
+				opacity: 1;
+        transform: translate(-53%, -8%);
+			}
+		}
+	}
 }
 
 .sidebar__link {
@@ -84,7 +98,7 @@
     border: rem(1px) solid #fff;
     position: absolute;
     left: 50%;
-    transform: translate(-57%, -7%);
+    transform: translate(-53%, -8%);
     opacity: 0;
     transition: .3s;
     background-color: transparent;

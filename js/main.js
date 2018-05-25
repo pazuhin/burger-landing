@@ -27,7 +27,7 @@ teamAcco.addEventListener('click', function(e) {
   var target = e.target;
 
   if(target.classList.contains('team-acco__trigger')) {
-console.log(target);
+// console.log(target);
     var content = target.nextElementSibling;
     var item = target.parentNode;
     var contentHeight = parseInt(content.style.height);
@@ -40,7 +40,7 @@ console.log(target);
       item.classList.add('team-acco__item--active');
 
       for (var i = 0; i < contents.length; i++) {
-        console.log(contents);
+        // console.log(contents);
         contents[i].style.height = 0;
       }
 
@@ -91,10 +91,10 @@ accordion.addEventListener("click", function(e) {
     var textContents = content.firstElementChild;
 
 
-     console.log("window.innerWidth");
-     console.log(window.innerWidth);
-     console.log("textContents.offsetWidth");
-     console.log(textContents.clientWidth);
+     // console.log("window.innerWidth");
+     // console.log(window.innerWidth);
+     // console.log("textContents.offsetWidth");
+     // console.log(textContents.clientWidth);
 
 
     if(window.innerWidth<740){
@@ -171,8 +171,8 @@ let start = 1;
 leftArrow.addEventListener('click', function (e) {
     e.preventDefault();
     var currentLeft = (parseInt(getComputedStyle(sliderList).left));
-  console.log(currentLeft);
-  console.log(size);
+  // console.log(currentLeft);
+  // console.log(size);
 
 
     if (start > 1 && currentLeft % size == 0) {
@@ -188,7 +188,7 @@ leftArrow.addEventListener('click', function (e) {
 rightArrow.addEventListener('click', function (e) {
     e.preventDefault();
     var currentLeft = (parseInt(getComputedStyle(sliderList).left));
-console.log(currentLeft);
+// console.log(currentLeft);
     if (start < 2 && currentLeft % size == 0) {
 
         sliderList.style.left = currentLeft - size + 'px';
@@ -202,9 +202,9 @@ console.log(currentLeft);
 
 window.addEventListener('resize', function() {
   size = parseInt(getComputedStyle(slider).width);
-  console.log("size: " + size);
-  console.log("start: " + start);
-  console.log(-size * start);
+  // console.log("size: " + size);
+  // console.log("start: " + start);
+  // console.log(-size * start);
   sliderList.style.left = -size * (start-1) + 'px';
 });
 
