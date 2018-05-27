@@ -3,8 +3,8 @@
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
-var md = new MobileDetect(window.navigator.userAgent);
-const isMobile = md.mobile();
+// var md = new MobileDetect(window.navigator.userAgent);
+// const isMobile = md.mobile();
 
 const setActiveMenuItem = itemEq => {
   $('.sidebar__item').eq(itemEq).addClass('active').siblings().removeClass('active');
@@ -77,17 +77,13 @@ document.addEventListener("keydown", function(e){
 
 $('[data-scroll-to]').on('click', e => {
   e.preventDefault();
-
   const targer = $(e.currentTarget).data('scroll-to');
   performTransition(targer);
+
 })
 
-if (isMobile) {
-  $("document").swipe( {
-      //Generic swipe handler for all directions
-      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-        const swipeDirection = direction === 'down' ? 'up' : 'down';
-        scrollToSection(swipeDirection);
-      }
-    });
-}
+const mobilMenuLink = $('.mobil-menu__link');
+mobilMenuLink.addEventListener("click", function(e){
+  e.preventDefault();
+  $('#mobil-page').css("top", "9999px");
+});

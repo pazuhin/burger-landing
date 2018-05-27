@@ -1,0 +1,45 @@
+.formPage {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(62, 61, 59, 0.8);
+  height: 100%;
+  transition: 0.3s;
+  display: none;
+  padding: 0 2rem;
+
+  .content {
+    width: 13.5rem;
+    min-height: rem(110px);
+    background: #fff;
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+    padding: rem(25px) rem(15px);
+    position: relative;
+  }
+
+  .content__title {
+    margin-bottom: rem(25px);
+    font-size: rem(14px);
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-weight: 400;
+  }
+
+  .order-link {
+    text-align: center;
+    width: rem(100px);
+    height: rem(35px);
+    margin: 0 auto;
+  }
+
+}
+
+.is-active {
+  display: flex;
+}

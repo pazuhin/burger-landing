@@ -1572,7 +1572,7 @@ textarea {
     -ms-flex-direction: column;
     flex-direction: column; } }
 
-.map {
+#map {
   color: #fff;
   position: relative; }
 
@@ -1856,5 +1856,55 @@ textarea {
   -webkit-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
+
+.formPage {
+  position: fixed;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(62, 61, 59, 0.8);
+  height: 100%;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  display: none;
+  padding: 0 2rem; }
+  .formPage .content {
+    width: 13.5rem;
+    min-height: 6.875rem;
+    background: #fff;
+    border-radius: 0.3125rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 1.5625rem 0.9375rem;
+    position: relative; }
+  .formPage .content__title {
+    margin-bottom: 1.5625rem;
+    font-size: 0.875rem;
+    text-align: center;
+    font-family: 'Ubuntu';
+    font-weight: 400; }
+  .formPage .order-link {
+    text-align: center;
+    width: 6.25rem;
+    height: 2.1875rem;
+    margin: 0 auto; }
+
+.is-active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 /*# sourceMappingURL=main.css.map */
