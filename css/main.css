@@ -495,18 +495,6 @@ ul {
     text-align: left;
     padding-left: 6%; } }
 
-@media screen and (max-width: 480px) {
-  .hand {
-    margin-bottom: 45px; } }
-
-@media screen and (max-width: 480px) {
-  .margin-hand {
-    padding-left: 12%; } }
-
-@media screen and (max-width: 480px) {
-  .margin-list {
-    padding-left: 7%; } }
-
 .description__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -557,6 +545,15 @@ ul {
 
 .description__img--natural {
   margin-bottom: 2.1875rem; }
+
+.description__img-meat {
+  fill: #e25028; }
+
+.description__img-hand {
+  fill: #f8b43a; }
+
+.description__img-natural {
+  fill: #8ac03e; }
 
 .burger {
   background: #f9b43b;

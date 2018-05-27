@@ -82,8 +82,8 @@ $('[data-scroll-to]').on('click', e => {
 
 })
 
-const mobilMenuLink = $('.mobil-menu__link');
-mobilMenuLink.addEventListener("click", function(e){
-  e.preventDefault();
-  $('#mobil-page').css("top", "9999px");
-});
+// const mobilMenuLink = $('.mobil-menu__link');
+// mobilMenuLink.addEventListener("click", function(e){
+//   e.preventDefault();
+//   $('#mobil-page').css("top", "9999px");
+// });

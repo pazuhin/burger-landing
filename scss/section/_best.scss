@@ -52,24 +52,6 @@
   }
 }
 
-.hand {
-  @include phones {
-    margin-bottom: 45px;
-  }
-}
-
-.margin-hand {
-  @include phones {
-    padding-left: 12%;
-  }
-}
-
-.margin-list {
-  @include phones {
-    padding-left: 7%;
-  }
-}
-
 .description__item {
     display: flex;
     flex-direction: column;
@@ -127,4 +109,16 @@
 
 .description__img--natural {
     margin-bottom: rem(35px);
+}
+
+.description__img-meat {
+  fill: $orange;
+}
+
+.description__img-hand {
+  fill: $yellow;
+}
+
+.description__img-natural {
+  fill: $green;
 }
