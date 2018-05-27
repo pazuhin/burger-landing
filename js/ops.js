@@ -59,7 +59,7 @@ $(document).on({
         console.log('up');
     }
   },
-  touchmove: e => e.preventDefault()
+  // touchmove: e => e.preventDefault()
 });
 
 document.addEventListener("keydown", function(e){
