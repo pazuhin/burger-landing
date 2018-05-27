@@ -1,5 +1,5 @@
 // OPS
-
+const wrapper = $(".wrapper");
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
@@ -84,6 +84,8 @@ if (!isMobile) {
 
   })
 
+} else {
+  wrapper.css("min-height", "100%");
 }
 
 
