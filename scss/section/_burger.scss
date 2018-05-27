@@ -40,7 +40,7 @@
   width: 100%;
 }
 
-.burger__item {
+.slider__item {
   position: relative;
   height: 100%;
 
@@ -53,7 +53,7 @@
   }
 }
 
-.burger__content {
+.slider__content {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -65,7 +65,7 @@
   }
 }
 
-.burger__description {
+.slider__description {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -88,7 +88,7 @@
   }
 }
 
-.burger__img {
+.slider__img {
   max-width: 100%;
   display: block;
   max-height: 100%;
@@ -101,15 +101,15 @@
   }
 }
 
-.burger__img--pic {
+.slider__img--pic {
   max-width: 100%;
 }
 
-.burger__description {
+.slider__description {
   flex-basis: 50%;
 }
 
-.burger__description-text {
+.slider__description-text {
   font-size: rem(14px);
   font-family: 'Ubuntu';
   font-weight: 300;
@@ -130,7 +130,7 @@
   }
 }
 
-.burger__order {
+.slider__order {
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -140,7 +140,7 @@
   }
 }
 
-.burger__order-text{
+.slider__order-text{
   font-family: 'Gagalin';
   font-size: rem(72px);
   color: $orange;
@@ -151,7 +151,7 @@
   }
 }
 
-.burger__order-price {
+.slider__order-price {
   font-size: rem(36px);
 
   @include phones {
@@ -159,7 +159,7 @@
   }
 }
 
-.burger__order-text .order-link {
+.slider__order-text .order-link {
   transform: translateY(-8px);
 }
 
@@ -208,7 +208,7 @@
   }
 }
 
-.burger__mixed {
+.slider__mixed {
   position: absolute;
   top: 0;
   left: 3%;
@@ -242,24 +242,24 @@
   }
 }
 
-.burger__mixed-img {
+.slider__mixed-img {
   fill: #fff;
   text-align: center;
   margin-bottom: rem(5px);
 }
 
-.burger__mixed-txt, .burger__kkal-txt {
+.slider__mixed-txt, .slider__kkal-txt {
   font-family: 'Gagalin';
   font-size: rem(14px);
   color: #fff;
   text-align: center;
 }
 
-.burger__kkal-txt {
+.slider__kkal-txt {
   color: #f9d19d;
 }
 
-.burger__kkal {
+.slider__kkal {
   position: absolute;
   bottom: 0;
   left: 2%;
@@ -286,14 +286,14 @@
     }
 }
 
-.burger__kkal-img {
+.slider__kkal-img {
   fill: #f9d29d;
   text-align: center;
   margin-bottom: rem(5px);
   position: relative;
 }
 
-.burger__kkal-num {
+.slider__kkal-num {
   position: absolute;
   top: 38%;
   left: 32%;
@@ -356,7 +356,7 @@ td {
     fill: $green;
 }
 
-.burger__table-ingr {
+.slider__table-ingr {
   font-size: rem(14px);
   font-weight: 500;
 }

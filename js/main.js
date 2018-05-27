@@ -1,5 +1,5 @@
-var  btn = document.getElementById('menu__link');
-var  mobilPage = document.querySelector("#mobil-page");
+const  btn = document.getElementById('menu__link');
+const  mobilPage = document.querySelector("#mobil-page");
 const  btnClose = document.querySelector('.close');
 let currentTop = 0;
 

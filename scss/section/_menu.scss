@@ -9,9 +9,7 @@
   width: 100%;
 }
 
-.accordion {
-  display: inline-block;
-  max-width: 100%;
+#accordion {
   z-index: 99;
 }
 
@@ -55,7 +53,7 @@
 }
 
 .menu-acco__text {
-  padding: rem(90px) rem(36px) 0 rem(40px);
+  padding: 1.625rem rem(36px) 0 rem(40px);
   overflow: hidden;
   line-height: 1.8;
   transition: width 1s;
