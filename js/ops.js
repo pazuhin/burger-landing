@@ -86,11 +86,5 @@ if (!isMobile) {
 
 } else {
   wrapper.css("min-height", "100%");
+  wrapper.css("height", "auto");
 }
-
-
-// const mobilMenuLink = $('.mobil-menu__link');
-// mobilMenuLink.addEventListener("click", function(e){
-//   e.preventDefault();
-//   $('#mobil-page').css("top", "9999px");
-// });
