@@ -85,6 +85,6 @@ if (!isMobile) {
   })
 
 } else {
-  // wrapper.css("min-height", "100%");
+  wrapper.css("min-height", "100%");
   wrapper.css("height", "100%");
 }
