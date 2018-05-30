@@ -22,7 +22,7 @@ $('#order-form').on('submit', submitForm);
           status = massage.status;
 
       if (status === 'OK') {
-          $('.formPage').addClass('is-active');
+          $('.form-page').addClass('is-active');
       } else{
           form.append('<p class="error">' + mes + '</p>');
       }
@@ -49,6 +49,6 @@ $('#order-form').on('submit', submitForm);
     //console.log(e);
     var orderLinkCls = e.target;
     if(e.target) {
-      $('.formPage').removeClass('is-active');
+      $('.form-page').removeClass('is-active');
     }
   });
