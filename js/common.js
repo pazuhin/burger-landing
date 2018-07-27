@@ -44,11 +44,11 @@ $('#order-form').on('submit', submitForm);
       })
   };
 
-  $('.order-link').last().on('click', function(e){
-    e.preventDefault();
-    //console.log(e);
-    var orderLinkCls = e.target;
-    if(e.target) {
-      $('.form-page').removeClass('is-active');
-    }
-  });
+  // $('.order-link').last().on('click', function(e){
+  //   e.preventDefault();
+  //   //console.log(e);
+  //   var orderLinkCls = e.target;
+  //   if(e.target) {
+  //     $('.form-page').removeClass('is-active');
+  //   }
+  // });

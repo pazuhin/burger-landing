@@ -78,9 +78,7 @@
   border: 1px solid #fff;
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-53%, -5%);
-  -ms-transform: translate(-53%, -5%);
-  transform: translate(-53%, -5%);
+  transform: translate(-57%, -8%);
   opacity: 0;
   -webkit-transition: .3s;
   -o-transition: .3s;
