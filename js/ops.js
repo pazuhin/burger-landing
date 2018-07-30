@@ -1,3 +1,22 @@
+// const  Close = document.querySelector('.close');
+// const  mobilPage = document.querySelector("#mobil-page");
+// const  menuLink = document.querySelectorAll('.mobil-menu__item');
+// console.log(menuLink);
+//
+// $(btnClose).on('click touchstart touchend', () => {
+//     $(mobilPage).toggleClass('visible');
+// });
+//
+// $(tabletsMenuClose).on('click touchstart touchend', () => {
+//     $(tabletsMenu).toggleClass('visible');
+// });
+//
+// $(menuLink).on('click touchstart', () => {
+//     $(tabletsMenu).toggleClass('visible');
+// });
+
+
+
 // OPS
 const wrapper = $(".wrapper");
 const menu = $(".menu");
@@ -107,6 +126,7 @@ $('[data-scroll-to]').on('click touchstart', e => {
     const sectionIndex = parseInt($this.attr('data-scroll-to'));
 
     performTransition(sectionIndex);
+
 
 });
 

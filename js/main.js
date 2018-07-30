@@ -2,26 +2,35 @@ const  btn = document.getElementById('menu__link');
 const  mobilPage = document.querySelector("#mobil-page");
 const  btnClose = document.querySelector('.close');
 const  mobilList = document.querySelector('.mobil-menu__list');
+const  menuLink = document.querySelectorAll('.mobil-menu__item');
 let currentTop = 0;
 
 btn.addEventListener('click', function(e) {
  e.preventDefault();
- mobilPage.style.top = currentTop + 'px';
+  mobilPage.classList.toggle('visible');
 });
 
-btnClose.addEventListener('click  touchstart touchend', function(e) {
-  e.preventDefault();
-  mobilPage.style.top = currentTop + 9999 + 'px';
+// btnClose.addEventListener('click', function(e) {
+//   e.preventDefault();
+//   mobilPage.style.top = currentTop + 9999 + 'px';
+// });
+//
+// mobilList.addEventListener('click', function(e){
+//     e.preventDefault();
+//     console.log(e.target);
+//     if(e.target) {
+//         mobilPage.style.top = currentTop + 9999 + 'px';
+//     }
+// });
+
+
+$(btnClose).on('click touchstart touchend', () => {
+    $(mobilPage).toggleClass('visible');
 });
 
-mobilList.addEventListener('click  touchstart', function(e){
-    e.preventDefault();
-    console.log(e.target);
-    if(e.target) {
-        mobilPage.style.top = currentTop + 9999 + 'px';
-    }
+$(menuLink).on('click touchstart', () => {
+    $(mobilPage).toggleClass('visible');
 });
-
 
 
 //acco-team
