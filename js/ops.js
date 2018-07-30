@@ -81,6 +81,7 @@ if (!isMobile) {
   $('[data-scroll-to]').on('click', e => {
     e.preventDefault();
     const targer = $(e.currentTarget).data('scroll-to');
+    console.log(targer);
     performTransition(targer);
 
   })
