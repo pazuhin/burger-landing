@@ -7,7 +7,6 @@ let inScroll = false;
 var md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-// if (!isMobile) {
 
     const setActiveMenuItem = itemEq => {
         $('.sidebar__item').eq(itemEq).addClass('active').siblings().removeClass('active');
@@ -48,7 +47,7 @@ const isMobile = md.mobile();
             performTransition(nextSection.index());
         }
 
-    }
+    };
 
     $(document).on({
         wheel: e => {
@@ -62,7 +61,7 @@ const isMobile = md.mobile();
                 console.log('up');
             }
         },
-        // touchmove: e => e.preventDefault()
+         touchmove: e => e.preventDefault()
     });
 
     document.addEventListener("keydown", function (e) {
@@ -85,9 +84,14 @@ const isMobile = md.mobile();
         performTransition(targer);
 
     })
-//}
-// } else {
-//   wrapper.css("min-height", "100%");
-//   wrapper.css("height", "auto");
-//   menu.css("height", "100vh");
-// }
+
+if (isMobile) {
+    $(document).swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+
+            const scrollDirection = direction === 'down' ? 'up' : 'down';
+
+            scrollToSection(scrollDirection);
+        }
+    });
+}
