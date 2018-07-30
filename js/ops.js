@@ -7,87 +7,87 @@ let inScroll = false;
 var md = new MobileDetect(window.navigator.userAgent);
 const isMobile = md.mobile();
 
-if (!isMobile) {
+// if (!isMobile) {
 
-  const setActiveMenuItem = itemEq => {
-    $('.sidebar__item').eq(itemEq).addClass('active').siblings().removeClass('active');
-  }
+    const setActiveMenuItem = itemEq => {
+        $('.sidebar__item').eq(itemEq).addClass('active').siblings().removeClass('active');
+    }
 
-  const performTransition = sectionEq => {
-    const position = `${-sectionEq * 100}%`;
+    const performTransition = sectionEq => {
+        const position = `${-sectionEq * 100}%`;
 
-    if (inScroll) return;
+        if (inScroll) return;
 
-    inScroll = true;
-    sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
+        inScroll = true;
+        sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
 
-    display.css({
-      transform: `translate(0, ${position})`,
-      "-webkit-transform": `translate(0, ${position})`
+        display.css({
+            transform: `translate(0, ${position})`,
+            "-webkit-transform": `translate(0, ${position})`
+        });
+
+        const transitionDuration = parseInt(display.css('transition-duration')) * 1000; // получаем время в мс
+
+        setTimeout(() => {
+            inScroll = false;
+            setActiveMenuItem(sectionEq)
+        }, transitionDuration + 300);
+
+    };
+
+    const scrollToSection = direction => {
+        const activeSection = sections.filter('.active');
+        const nextSection = activeSection.next();
+        const prevSection = activeSection.prev();
+
+        if (direction === 'up' && prevSection.length) {
+            performTransition(prevSection.index());
+        }
+
+        else if (direction === 'down' && nextSection.length) {
+            performTransition(nextSection.index());
+        }
+
+    }
+
+    $(document).on({
+        wheel: e => {
+            console.log(e);
+            const deltaY = e.originalEvent.deltaY;
+            if (deltaY > 0) {
+                scrollToSection('down');
+                console.log('down');
+            } else {
+                scrollToSection('up');
+                console.log('up');
+            }
+        },
+        // touchmove: e => e.preventDefault()
     });
 
-    const transitionDuration = parseInt(display.css('transition-duration')) * 1000; // получаем время в мс
+    document.addEventListener("keydown", function (e) {
+        console.log(e.keyCode);
+        switch (e.keyCode) {
+            case 40:
+                scrollToSection("down");
+                break;
 
-     setTimeout(() => {
-       inScroll = false;
-       setActiveMenuItem(sectionEq)
-     }, transitionDuration + 300);
+            case 38:
+                scrollToSection("up");
+                break;
+        }
+    });
 
-  };
+    $('[data-scroll-to]').on('click', e => {
+        e.preventDefault();
+        const targer = $(e.currentTarget).data('scroll-to');
+        console.log(targer);
+        performTransition(targer);
 
-  const scrollToSection = direction => {
-    const activeSection = sections.filter('.active');
-    const nextSection = activeSection.next();
-    const prevSection = activeSection.prev();
-
-    if (direction === 'up' && prevSection.length) {
-      performTransition(prevSection.index());
-    }
-
-    else if (direction === 'down' && nextSection.length) {
-      performTransition(nextSection.index());
-    }
-
-  }
-
-  $(document).on({
-    wheel: e => {
-    console.log(e);
-      const deltaY = e.originalEvent.deltaY;
-      if (deltaY > 0) {
-        scrollToSection('down');
-        console.log('down');
-      } else {
-          scrollToSection('up');
-          console.log('up');
-      }
-    },
-    // touchmove: e => e.preventDefault()
-  });
-
-  document.addEventListener("keydown", function(e){
-    console.log(e.keyCode);
-    switch (e.keyCode) {
-        case 40:
-          scrollToSection("down");
-          break;
-
-        case 38:
-          scrollToSection("up");
-          break;
-      }
-  });
-
-  $('[data-scroll-to]').on('click', e => {
-    e.preventDefault();
-    const targer = $(e.currentTarget).data('scroll-to');
-    console.log(targer);
-    performTransition(targer);
-
-  })
-
-} else {
-  wrapper.css("min-height", "100%");
-  wrapper.css("height", "auto");
-  menu.css("height", "100vh");
-}
+    })
+//}
+// } else {
+//   wrapper.css("min-height", "100%");
+//   wrapper.css("height", "auto");
+//   menu.css("height", "100vh");
+// }
