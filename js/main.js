@@ -9,18 +9,20 @@ btn.addEventListener('click', function(e) {
  mobilPage.style.top = currentTop + 'px';
 });
 
-btnClose.addEventListener('click', function(e) {
+btnClose.addEventListener('click  touchstart touchend', function(e) {
   e.preventDefault();
   mobilPage.style.top = currentTop + 9999 + 'px';
 });
 
-mobilList.addEventListener('click', function(e){
+mobilList.addEventListener('click  touchstart', function(e){
     e.preventDefault();
     console.log(e.target);
     if(e.target) {
         mobilPage.style.top = currentTop + 9999 + 'px';
     }
 });
+
+
 
 //acco-team
 
