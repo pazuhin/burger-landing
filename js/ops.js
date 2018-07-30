@@ -4,8 +4,9 @@ const menu = $(".menu");
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
-//var md = new MobileDetect(window.navigator.userAgent);
-//const isMobile = md.mobile();
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
 
 
     const setActiveMenuItem = itemEq => {
@@ -13,11 +14,13 @@ let inScroll = false;
     }
 
     const performTransition = sectionEq => {
-        const position = `${-sectionEq * 100}%`;
+
 
         if (inScroll) return;
 
         inScroll = true;
+        const position = `${-sectionEq * 100}%`;
+
         sections.eq(sectionEq).addClass('active').siblings().removeClass('active');
 
         display.css({
@@ -34,64 +37,76 @@ let inScroll = false;
 
     };
 
-    const scrollToSection = direction => {
-        const activeSection = sections.filter('.active');
-        const nextSection = activeSection.next();
-        const prevSection = activeSection.prev();
+const defineSections = sections => {
+    const activeSection = sections.filter('.active');
 
-        if (direction === 'up' && prevSection.length) {
-            performTransition(prevSection.index());
+    return {
+        activeSection: activeSection,
+        nextSection: activeSection.next(),
+        prevSection: activeSection.prev()
+    }
+}
+
+const scrollToSection = direction => {
+    const section = defineSections(sections);
+
+    if (inScroll) return;
+
+    if (direction === 'up' && section.nextSection.length) {
+        performTransition(section.nextSection.index());
+    }
+
+    if (direction === 'down' && section.prevSection.length) {
+        performTransition(section.prevSection.index());
+    }
+}
+
+$('.wrapper').on( {
+    wheel: e => {
+        const deltaY = e.originalEvent.deltaY;
+        let direction = (deltaY > 0) ? 'up' : 'down';
+
+        scrollToSection(direction);
+    },
+    touchmove: e => (e.preventDefault())
+});
+
+$(document).on('keydown', e => {
+    const section = defineSections(sections);
+
+    if (inScroll) return
+
+    switch (e.keyCode) {
+        case 40:
+            if (!section.nextSection.length) return ;
+            performTransition(section.nextSection.index());
+            break;
+
+        case 38:
+            if (!section.prevSection.length) return ;
+            performTransition(section.prevSection.index());
+            break;
+    }
+
+});
+
+if (isMobile) {
+  console.log(111);
+    $(window).swipe({
+        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+            scrollToSection(direction);
         }
-
-        else if (direction === 'down' && nextSection.length) {
-            performTransition(nextSection.index());
-        }
-
-    };
-
-    $(document).on({
-        wheel: e => {
-            console.log(e);
-            const deltaY = e.originalEvent.deltaY;
-            if (deltaY > 0) {
-                scrollToSection('down');
-                console.log('down');
-            } else {
-                scrollToSection('up');
-                console.log('up');
-            }
-        },
-         touchmove: e => e.preventDefault()
     });
+}
 
-    document.addEventListener("keydown", function (e) {
-        console.log(e.keyCode);
-        switch (e.keyCode) {
-            case 40:
-                scrollToSection("down");
-                break;
+$('[data-scroll-to]').on('click touchstart', e => {
 
-            case 38:
-                scrollToSection("up");
-                break;
-        }
-    });
+    e.preventDefault();
 
-    $('[data-scroll-to]').on('click', e => {
-        e.preventDefault();
-        const targer = $(e.currentTarget).data('scroll-to');
-        console.log(targer);
-        performTransition(targer);
+    const $this = $(e.currentTarget);
+    const sectionIndex = parseInt($this.attr('data-scroll-to'));
 
-    })
-//
-// if (isMobile) {
-//     $(document).swipe({
-//         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-//
-//             const scrollDirection = direction === 'down' ? 'up' : 'down';
-//
-//             scrollToSection(scrollDirection);
-//         }
-//     });
-// }
+    performTransition(sectionIndex);
+
+});
+
