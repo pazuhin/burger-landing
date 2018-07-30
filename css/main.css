@@ -1853,7 +1853,7 @@ textarea {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg); }
 
-.formPage {
+.form-page {
   position: fixed;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -1872,7 +1872,7 @@ textarea {
   transition: 0.3s;
   display: none;
   padding: 0 2rem; }
-  .formPage .content {
+  .form-page .content {
     width: 13.5rem;
     min-height: 6.875rem;
     background: #fff;
@@ -1886,13 +1886,13 @@ textarea {
     flex-direction: column;
     padding: 1.5625rem 0.9375rem;
     position: relative; }
-  .formPage .content__title {
+  .form-page .content__title {
     margin-bottom: 1.5625rem;
     font-size: 0.875rem;
     text-align: center;
     font-family: 'Ubuntu';
     font-weight: 400; }
-  .formPage .order-link {
+  .form-page .order-link {
     text-align: center;
     width: 6.25rem;
     height: 2.1875rem;
