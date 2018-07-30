@@ -97,6 +97,15 @@ if (isMobile) {
             scrollToSection(direction);
         }
     });
+    const  mobilPage = $("#mobil-page");
+    const  mobilList = $(".mobil-menu__list");
+    mobilList.addEventListener('click', function(e){
+        e.preventDefault();
+        console.log(444);
+        if(e.target) {
+            mobilPage.style.top = currentTop + 9999 + 'px';
+        }
+    });
 }
 
 $('[data-scroll-to]').on('click touchstart', e => {
