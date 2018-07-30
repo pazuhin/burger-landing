@@ -4,8 +4,8 @@ const menu = $(".menu");
 const sections = $(".section");
 const display = $(".maincontent");
 let inScroll = false;
-var md = new MobileDetect(window.navigator.userAgent);
-const isMobile = md.mobile();
+//var md = new MobileDetect(window.navigator.userAgent);
+//const isMobile = md.mobile();
 
 
     const setActiveMenuItem = itemEq => {
@@ -84,14 +84,14 @@ const isMobile = md.mobile();
         performTransition(targer);
 
     })
-
-if (isMobile) {
-    $(document).swipe({
-        swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
-
-            const scrollDirection = direction === 'down' ? 'up' : 'down';
-
-            scrollToSection(scrollDirection);
-        }
-    });
-}
+//
+// if (isMobile) {
+//     $(document).swipe({
+//         swipe: function(event, direction, distance, duration, fingerCount, fingerData) {
+//
+//             const scrollDirection = direction === 'down' ? 'up' : 'down';
+//
+//             scrollToSection(scrollDirection);
+//         }
+//     });
+// }
