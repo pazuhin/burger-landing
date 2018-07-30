@@ -1,6 +1,7 @@
 const  btn = document.getElementById('menu__link');
 const  mobilPage = document.querySelector("#mobil-page");
 const  btnClose = document.querySelector('.close');
+const  mobilList = document.querySelector('.mobil-menu__list');
 let currentTop = 0;
 
 btn.addEventListener('click', function(e) {
@@ -13,6 +14,13 @@ btnClose.addEventListener('click', function(e) {
   mobilPage.style.top = currentTop + 9999 + 'px';
 });
 
+mobilList.addEventListener('click', function(e){
+    e.preventDefault();
+    console.log(e.target);
+    if(e.target) {
+        mobilPage.style.top = currentTop + 9999 + 'px';
+    }
+});
 
 //acco-team
 
